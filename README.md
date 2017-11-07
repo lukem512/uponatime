@@ -29,7 +29,11 @@ function buttonHandler() {
 }
 ```
 
-An `opts` parameter may be passed with a single parameter: `thrice`. Enabling `thrice` will print `thrice` rather than `3 times`. The default value is `false`.
+An `opts` object may be passed as a optional parameter.
+
+Specifying a truthy value for `thrice` will print `thrice` rather than `3 times`. The default value for `thrice` is `false`.
+
+Specifying a truthy value of `capitalize` will print `Once`, `Twice` and `Trhrice` with a capital letter at the beginning. Then values for `n times` are not affected. The default value for `capitalize` is `false`.
 
 A second method, `times` is also exported. This will simply print `n times` for a specified value of `n`.
 
