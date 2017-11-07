@@ -10,15 +10,16 @@ const times = function(n) {
   return `${n} times`
 }
 
-const spoken = function(n, opts = {}) {
+const spoken = function(n, opts) {
+  const _opts = opts || {};
   if (n === 1) {
-    return opts.capitalize ? 'Once' : 'once';
+    return _opts.capitalize ? 'Once' : 'once';
   }
   if (n === 2) {
-    return opts.capitalize ? 'Twice' : 'twice';
+    return _opts.capitalize ? 'Twice' : 'twice';
   }
-  if (opts.thrice && n === 3) {
-    return opts.capitalize ? 'Thrice' : 'thrice';
+  if (_opts.thrice && n === 3) {
+    return _opts.capitalize ? 'Thrice' : 'thrice';
   }
   return times(n);
 }
